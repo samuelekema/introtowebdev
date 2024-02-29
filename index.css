@@ -1,0 +1,729 @@
+/***import google font***/
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100&display=swap');
+/***added default styling***/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Saira Semi Condensed', sans-serif;  
+}
+
+button{
+/***default styling for buttons****/
+    background-color: skyblue;
+    width: 100px;
+    height: 35px;
+    border-radius: 40px;
+    border: none;
+    margin: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+button:hover{
+/***change button effect on hover***/
+    background-color: rgb(21, 137, 183) !important;
+    box-shadow: 1px 1px 6px 8px skyblue;
+}
+
+
+
+
+#welcome{
+    /***custom home page with animation***/
+    background-image: url(images/stars-bg.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    max-width: 100%;
+}
+
+.container{
+    background-color: black;
+}
+
+
+
+.welcome-wrapper{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+}
+
+.welcome-wrapper > span{
+    font-size: 35px;
+}
+
+#dropdown-menu{
+    /***drop down menu for smaller devices****/
+    position: fixed;
+    right: 30px;
+    top: 68px;
+    border: solid skyblue;
+    box-shadow: 1px 1px 5px rgb(51, 191, 247);
+    opacity: 0;
+    transition: all linear 1s;
+    z-index: 5000;
+}
+
+.visible{
+    opacity:1 !important;
+}
+
+#dropdown-menu ul{
+    text-align: center;
+    background-color: rgb(11, 39, 50);
+}
+
+
+#dropdown-menu li a{
+    font-weight: 500;
+    font-size: 30px;
+    color: #2dc7ff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+
+#dropdown-menu li a:hover{
+    color: white;
+}
+
+#dropdown-menu li{
+    list-style: none;
+}
+.caret-down{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 60%;
+}
+
+.caret-down .fa-caret-down{
+    font-size: 3.2rem;
+    cursor: pointer;
+    animation: drop 1s;
+    animation-timing-function: ease-in-out;
+    -moz-animation: drop 1s;
+    -o-animation: drop 1s;
+    -webkit-animation: drop 1s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes drop{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(30px);}
+}
+
+@-webkit-keyframes drop{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(30px);}     /****key frames to animate caret button****/
+}
+
+
+@-o-keyframes drop{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(30px);}
+}
+
+
+@-moz-keyframes drop{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(30px);}
+}
+
+
+
+/***HOME SECTION***/
+
+.light-theme{
+    display: inline-block;
+
+}
+
+.circle1{
+    width: 50px;
+    height: 20px;
+    border: solid black 1px;  
+    border-radius: 50px;
+    background-color: skyblue;
+}
+
+.circle2{
+    width: 20px;
+    height: 18px;
+    border: solid black;
+    border-radius: 50px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    z-index: 1000;
+    background-color: black
+}
+
+.switchColorBlack{
+    background-color: black;   /****classlist ***/
+}
+
+.switchColorWhite{
+    background-color: rgb(176, 173, 173);
+}
+
+.nav-active{
+    background: skyblue
+}
+
+.navbar ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    margin: 20px;
+    font-size: 30px;
+    transition: all 2s;
+    color: white;
+    font-weight: 600;
+}
+
+.navbar ul li a:hover{
+    color: rgb(18, 83, 79);
+}
+
+.menu-bar{
+    display: inline-block;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-bar .bar{
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    margin: 8px;
+    transition: all 1s;
+}
+
+
+.change .bar1{
+    transform: translate(0 , 10px)rotate(45deg);
+}
+
+.change .bar2{
+    opacity: 0;
+}
+
+.change .bar3{
+    transform: translate(0, -10px)rotate(-45deg);
+}
+
+
+
+
+/***ABOUT SECTION***/
+
+#about{
+    background-image: url(images/bg2.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-title{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+
+.about-title h1{
+    text-shadow: 
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,    /****add fancy text styling****/
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    5px 3px 1px skyblue;
+}
+.about-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;   
+    padding: 0 25px 0 25px; 
+}
+
+.my-picture{
+    width: 350px;
+    height: 300px;
+}
+
+.grid1{
+    margin-top: 60px;
+}
+
+.hello-wrapper{
+    padding-right: 20px;
+}
+
+
+.grid2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid1 p{
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+
+.downloadBtn{
+    display: flex;
+    justify-content: center;
+}
+
+/***media query to adjust my picture size and grid to fit screen***/
+@media(max-width:755px){
+    .about-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .my-picture{
+        margin-bottom: 50px;
+    }
+}
+
+
+@media(max-width:281px){
+    .my-picture{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/***CONTACT SECTION****/
+
+#contact{
+    max-width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.contact-title, .add-note{
+    display: flex;
+    justify-content: center;
+}
+
+.contact-title h1{
+    font-size: 35px;
+    letter-spacing: 5px;
+    text-shadow: 
+    0 0 1px black,
+    0 0 1px black,
+    0 0 1px black,
+    0 0 1px black,
+    0 0 1px black,
+    0 0 1px black,
+    0 0 1px black,
+    0 0 1px black,
+    0 0 1px black,
+    2px 5px lightseagreen;
+}
+
+#contact .add-note{
+    color: gray;
+}
+
+#contact form > div{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+#contact textarea:focus, #contact input:focus{
+    outline: none;
+}
+#contact textarea::placeholder, #contact input::placeholder{
+    font-weight: bold;
+    color: black;
+}
+
+textarea{
+    width: 400px;
+    color: black;
+    resize: none;
+}
+
+#contact input[type=text], #contact input[type=email], #contact textarea{
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+#submit-form{
+    width: 120px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    background-color: lightblue;
+    transition: all 1s;
+    font-weight: bold;
+    margin: 20px
+}
+    
+
+#name-input, #email-input{
+    width: 300px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    color: black;
+}
+
+input:hover, textarea:hover{
+    box-shadow: 0 5px 5px lightseagreen;
+}
+
+
+
+
+
+
+.color-change{
+    color: red !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****media queries****/
+
+@media(min-width: 761px){
+    #dropdown-menu{
+        display: none;
+    }
+}
+
+
+
+@media(max-width: 761px){
+    .navbar li a{
+        display: none;
+    }
+
+    .menu-bar{
+        display: inline-block;
+    }
+
+
+    .projects-grid{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows: repeat(6, 1fr);
+        gap: 15px;
+    }
+
+    .add-note{
+        text-align: center;
+    }
+}
+
+
+
+
+
+@media(max-width: 431px){
+    .skills-icon img{
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    .skills-center{
+        height: 50vh;
+    }
+
+    #home{
+        height: 80vh;
+    }
+
+   
+}
+
+@media (max-width:281px) {         /***galaxy fold device****/
+
+    #home{
+        height: 100vh;
+    }
+
+    .skills-icon img{
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+
+
+    .skills-icon{
+        border: solid lightskyblue 1px;
+        margin: 6px;
+    }
+
+    .sub-skills p {
+        text-align: center;
+    }
+   
+}
+
+
+@media(max-width:913px) {
+    .proj{
+        width: 200px;
+        height: 20vh;
+        border: solid white;
+        margin: 6px;
+        cursor: pointer;
+    }
+}
+
+
+
+/****KEY FRAMES****/
+.welcome-wrapper :nth-child(1){
+    animation: fadeIn 2s;
+    animation-fill-mode: forwards;
+}
+.welcome-wrapper :nth-child(2){
+    animation: fadeIn 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.welcome-wrapper :nth-child(3){
+    animation: fadeIn 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.welcome-wrapper :nth-child(4){
+    animation: fadeIn 2s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.welcome-wrapper :nth-child(5){
+    animation: fadeIn 2s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+
+}
+
+.welcome-wrapper :nth-child(6){
+    animation: fadeIn 2s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+
+.welcome-wrapper :nth-child(7){
+    animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn{
+    0%{opacity: 0;}
+    20%{opacity: 0.20;
+        transform: translateY(20px);
+    }
+    30%{opacity: 0.30;}
+    50%{opacity: 0,50;}
+    90%{transform: translateY(-100px);}
+    100%{opacity: 1;
+        transform: translateY(50px);
+        text-shadow: 
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        2px 5px lightseagreen;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0%{opacity: 0;}
+    20%{opacity: 0.20;
+        transform: translateY(20px);
+    }
+    30%{opacity: 0.30;}
+    50%{opacity: 0,50;}
+    90%{transform: translateY(-100px);}
+    100%{opacity: 1;
+        transform: translateY(50px);
+        text-shadow: 
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        2px 5px lightseagreen;
+    }
+}
+
+@-moz-keyframes fadeIn{
+    0%{opacity: 0;}
+    20%{opacity: 0.20;
+        transform: translateY(20px);
+    }
+    30%{opacity: 0.30;}
+    50%{opacity: 0,50;}
+    90%{transform: translateY(-100px);}
+    100%{opacity: 1;
+        transform: translateY(50px);
+        text-shadow: 
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        2px 5px lightseagreen;
+    }
+}
+
+@-o-keyframes fadeIn{
+    0%{opacity: 0;}
+    20%{opacity: 0.20;
+        transform: translateY(20px);
+    }
+    30%{opacity: 0.30;}
+    50%{opacity: 0,50;}
+    90%{transform: translateY(-100px);}
+    100%{opacity: 1;
+        transform: translateY(50px);
+        text-shadow: 
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        0 0 1px black,
+        2px 5px lightseagreen;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.animate #home>div{
+    animation: slideIn 4s;
+    transition: all ease-in-out;
+    -webkit-animation: slideIn 4s;
+    -o-animation: slideIn 4s;
+    -moz-animation: slideIn 4s;
+}
+
+@keyframes slideIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@-moz-keyframes slideIn {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@-o-keyframes slideIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@-webkit-keyframes slideIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+
+
+.theme{
+    animation: theme 1s;
+    animation-fill-mode: forwards;
+    transition: all 1s;
+}
+
+
+@keyframes theme{
+    0%{transform: translateX(0px);}
+    100%{transform: translateX(30px);}  /***light theme animation***/
+}
+
+
+
